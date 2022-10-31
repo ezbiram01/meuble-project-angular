@@ -1,0 +1,44 @@
+            <!--+216 othmanbaligh26182433 T.G-->
+
+            <div class="col-md-7 col-lg-8 col-xl-9">
+                <div class="row">
+                    <div class="col-md-7 col-lg-8 col-xl-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                                    <div class="row form-row" >
+                                        <div class="col-9 col-md-7" >
+                                            <div class="form-group" >
+
+                                                <input type="email" class="form-control floating"
+                                                    formControlName="email">
+                                                <label class="focus-label">Veuillez saisir votre E-mail.</label>
+                                                <div
+                                                    *ngIf="loginForm.get('email')!.invalid && (loginForm.get('email')!.dirty || loginForm.get('email')!.touched)">
+                                                    <span class="error">E-mail invalide</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="password" class="form-control floating"
+                                                    formControlName="password">
+                                                <label class="focus-label">Veuillez saisir votre ancien  Mot de passe.</label>
+                                                <div
+                                                    *ngIf="loginForm.get('password')!.invalid && (loginForm.get('password')!.dirty || loginForm.get('password')!.touched)">
+                                                    <span class="error">Veuillez saisir votre ancien  Mot de passe.</span>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="submit-section">
+                                                <button type="submit" [disabled]="loginForm.invalid"
+                                                    class="btn btn-primary submit-btn">Sauvegarder</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--+216 othmanbaligh26182433 T.G-->

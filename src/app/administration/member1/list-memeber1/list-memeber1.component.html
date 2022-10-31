@@ -1,0 +1,61 @@
+
+<div class="col-md-12">
+    <h4 class="mb-4">Liste des Membres Niveau 1</h4>
+
+    
+    <div class="appointment-tab"> 
+        <div class="tab-content"> 
+            <div class="tab-pane show active" id="upcoming-appointments">
+                <div class="card card-table mb-0">
+                    <div class="card-body">
+                        
+                                    <!--+216 othmanbaligh26182433 T.G-->
+
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>N°</th>
+                                        <th>Nom & Prénom</th> 
+                                        <th>Téléphone</th>
+                                        <th>Country</th>
+                                        <th>Region</th>
+                                        <th>gender</th>
+                                        <th>email</th>
+
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let a of Memberlist">
+                                        <td>{{a.idUser}}</td>
+                                        <td>{{a.lastName}} {{a.firstName}} </td> 
+                                        <td>{{a.tel}}</td> 
+                                        <td>{{a.country}}</td> 
+                                        <td>{{a.region}}</td>
+                                        <td>{{a.gender}}</td> 
+                                        <td>{{a.email}}</td> 
+
+                                        <td class="text-end">
+                                            <div class="table-action"> 
+                                                <button [routerLink]="['edit', a.idUser]"
+                                                class="btn btn-sm bg-success-light">
+                                                <i class="fas fa-edit"></i></button>
+                                             <button (click)="deleteMember(a.idUser);"
+                                                class="btn btn-sm bg-danger-light">
+                                                <i class="fas fa-trash"></i> </button>
+                                            </div>
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>            <!--+216 othmanbaligh26182433 T.G-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <!--+216 othmanbaligh26182433 T.G-->
+

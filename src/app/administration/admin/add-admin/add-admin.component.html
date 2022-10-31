@@ -1,0 +1,109 @@
+
+            <!--+216 othmanbaligh26182433 T.G-->
+
+<div class="col-md-12">
+    <h4 class="mb-4">Ajout d'une Administrateur</h4>
+    <div class="appointment-tab"> 
+        <div class="tab-content"> 
+            <div class="tab-pane show active" id="upcoming-appointments">
+                <div class="card">
+                    <div class="card-body">
+                        <form  [formGroup]="addForm"  (ngSubmit)="saveAdmin()" >
+                            <div class="row form-row">             <!--+216 othmanbaligh26182433 T.G-->
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Nom</label>
+                                        <input type="text" class="form-control floating" formControlName="lastName">
+                                        <div *ngIf="addForm.get('lastName')!.invalid && (addForm.get('lastName')!.dirty || addForm.get('lastName')!.touched)">
+                                            <span class="error">Veuillez saisir  votre Nom</span>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Prenom</label>
+                                        <input type="text" class="form-control floating" formControlName="firstName">
+                                    <div *ngIf="addForm.get('firstName')!.invalid && (addForm.get('firstName')!.dirty || addForm.get('firstName')!.touched)">
+                                        <span class="error">Veuillez saisir votre Prénom</span>
+                                    </div>                                     
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Genre</label>
+                                        <select class="form-select form-control" formControlName="gender">
+                                            <option value="Homme">Homme</option>
+                                            <option value="Femme">Femme</option>
+                                        </select>
+                                        <div *ngIf="addForm.get('gender')!.invalid && (addForm.get('gender')!.dirty || addForm.get('gender')!.touched)">
+                                            <span class="error">Veuillez saisir votre genre</span>
+                                        </div>                                      
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Pays</label>
+                                        <input type="text" class="form-control floating" formControlName="country">
+                                        <div *ngIf="addForm.get('country')!.invalid && (addForm.get('country')!.dirty || addForm.get('country')!.touched)">
+                                            <span class="error">Veuillez saisir votre Pays</span>
+                                        </div>                                      
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Région</label>
+                                        <input type="text" class="form-control floating" formControlName="region">
+                                        <div *ngIf="addForm.get('region')!.invalid && (addForm.get('region')!.dirty || addForm.get('region')!.touched)">
+                                            <span class="error">Veuillez saisir votre Region</span>
+                                        </div>                                     
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group"> 
+                                        <label class="focus-label">Tel</label>
+                                        <input type="text" class="form-control floating" formControlName="tel">
+                                        <div *ngIf="tel!.invalid && tel!.touched">
+                                            <p *ngIf="tel?.errors?.['required']" class="error">Veuillez saisir votre Téléphone</p>
+                                            <p *ngIf="tel?.errors?.['minlength']" class="error">N° Téléphone au min 8 chiffres</p>
+                                            <p *ngIf="tel?.errors?.['maxlength']" class="error">N° Téléphone au max 8 chiffres</p>
+                                            <p *ngIf="tel?.errors?.['pattern']" class="error">N° Téléphone Invalide</p>
+                                        </div>                                      
+                                    </div>
+                                </div>
+                               
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Email</label>
+                                        <input type="text" class="form-control floating" formControlName="email">   
+                                        <div *ngIf="email!.invalid && email!.touched">
+                                            <p *ngIf="email?.errors?.['required']" class="error">Veuillez saisir votre E-mail</p>
+                                            <p *ngIf="email?.errors?.['pattern']" class="error">E-mail Invalide</p>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="focus-label">Mot de Passe</label>
+                                        <input type="password" class="form-control floating" formControlName="password">
+                                        <div *ngIf="addForm.get('password')!.invalid && (addForm.get('password')!.dirty || addForm.get('password')!.touched)">
+                                            <span class="error">Veuillez saisir votre mot de passe</span>
+                                     </div>
+                                    </div>
+                                </div> 
+                         
+                                 
+                            </div>
+                            <div class="submit-section">
+                                <button  [disabled]="addForm.invalid" type="submit" class="btn btn-primary submit-btn">Ajouter</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>             <!--+216 othmanbaligh26182433 T.G-->

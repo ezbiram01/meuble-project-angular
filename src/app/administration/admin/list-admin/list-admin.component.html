@@ -1,0 +1,69 @@
+
+<div class="col-md-12">
+    <h4 class="mb-4">Liste des Administrateurs
+        <button style="position: absolute; right:30px;" class="btn-sm btn-dark submit-btn" routerLink="add">Ajouter une Admin</button></h4>
+            <!--+216 othmanbaligh26182433 T.G-->
+
+    
+    <div class="appointment-tab"> 
+        <div class="tab-content"> 
+            <div class="tab-pane show active" id="upcoming-appointments">
+                <div class="card card-table mb-0">
+                    <div class="card-body">
+                        
+                        
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>N°</th>
+                                        <th>Nom & Prénom</th> 
+                                        <th>Téléphone</th>
+                                        <th>Country</th>
+                                        <th>Region</th> 
+                                        <th>gender</th>
+                                        <th>email</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let ad of adminsList">
+                                        <td>{{ad.idUser}}</td>
+                                        <td>{{ad.lastName}} {{ad.firstName}} </td> 
+                                        <td>{{ad.tel}}</td> 
+                                        <td>{{ad.country}}</td> 
+                                        <td>{{ad.region}}</td>  
+                                        <td>{{ad.gender}}</td>  
+                                        <td>{{ad.email}}</td> 
+
+                                        <td class="text-end">
+                                            <div class="table-action"> 
+                                                <button [routerLink]="['edit', ad.idUser]"
+                                                    class="btn btn-sm bg-success-light">
+                                                    <i class="fas fa-edit"></i></button>
+                                                    <!-- <button onclick="confirmer()"
+                                                    class="btn btn-sm bg-danger-light">
+                                                    <i class="fas fa-trash"></i> </button>-->
+                                                                <!--+216 othmanbaligh26182433 T.G-->
+
+                                               <button (click)="deleteAdmins(ad.idUser);"
+                                                    class="btn btn-sm bg-danger-light">
+                                                    <i class="fas fa-trash"></i> </button>
+                                            </div>
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 
+            <!--+216 othmanbaligh26182433 T.G-->

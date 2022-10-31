@@ -1,0 +1,43 @@
+            <!--+216 othmanbaligh26182433 T.G-->
+
+<div class="col-md-7 col-lg-9 col-xl-12">
+    <br>
+    <div class="header-three aos aos-init aos-animate" data-aos="fade-up">
+        <h2>{{'T1 PRODUIT' | translate }}</h2>
+        
+    </div>            <!--+216 othmanbaligh26182433 T.G-->
+
+   <!-- <div class="row align-items-center pb-3">
+        <div class="col-md-12 col-12 d-md-block d-none custom-short-by">
+            <h3 class="display-6" class="aa" ><strong><b><i> {{'T PRODUIT' | translate }} </i></b> </strong></h3>
+            <h4 class="display-6" class="aa"  ><strong><em> {{'T1 PRODUIT' | translate }} </em> </strong></h4>
+        </div>
+       
+    </div>-->
+    <div class="row">
+        <div class="col-md-12 col-lg-4 col-xl-4 product-custom" *ngFor="let c of produitList">
+            <div class="profile-widget">
+                <div class="doc-img">
+                    <a href={{c.source}} tabindex="-1">
+                        <img class="img-fluid" alt="Product image" src={{c.source}}>
+                    </a>
+                  
+                </div>
+                <div class="pro-content">
+                    <h3 class="title pb-4">
+                        <a tabindex="-1"> {{c.title}}</a>
+                    </h3>
+                    <div class="row align-items-center">
+                       
+                       
+                </div>
+            </div>
+        </div>
+       
+    </div>
+   <!-- <div class="col-md-12 text-center">
+        <a href="#" class="btn book-btn1 mb-4">Load More</a>
+    </div>-->
+</div>
+</div>
+            <!--+216 othmanbaligh26182433 T.G-->

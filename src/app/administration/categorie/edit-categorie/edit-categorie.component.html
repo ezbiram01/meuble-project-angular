@@ -1,0 +1,36 @@
+
+            <!--+216 othmanbaligh26182433 T.G-->
+
+<div class="col-md-12">
+    <h4 class="mb-4">Modifier d'une Catégorie</h4>
+    <div class="appointment-tab"> 
+        <div class="tab-content"> 
+            <div class="tab-pane show active" id="upcoming-appointments">
+                <div class="card">
+                    <div class="card-body">
+                        <form [formGroup]="addForm"  (ngSubmit)="editCategorie()">
+                            <div class="row form-row"> 
+                                <div class="col-12 col-md-12">
+                                    <div class="form-group">
+                                        <label  >Designation</label>
+                                      <input type="text" value="{{categ.designation}}"  class="form-control" formControlName="designation"> 
+                                        <div  *ngIf="addForm.get('designation')!.invalid && (addForm.get('designation')!.dirty || addForm.get('designation')!.touched)">
+                                            <span class="error">Veuillez saisir le nom de catégorie.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 
+                            </div>
+                            <div class="submit-section">
+                                <button [disabled]="addForm.invalid"  type="submit" class="btn btn-primary submit-btn">Valider</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>             <!--+216 othmanbaligh26182433 T.G-->

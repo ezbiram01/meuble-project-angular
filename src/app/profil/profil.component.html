@@ -1,0 +1,74 @@
+
+            <!--+216 othmanbaligh26182433 T.G-->
+
+            <div   style="margin-block-start: 15px; max-width: 330px;">
+    <div class="container">
+        <div class="nav-bg" style="height: 35px;">
+               <h3 style="margin-left: 30px;"><strong>Mon Compte</strong></h3>
+               
+        </div>
+    </div>
+</div>
+       <!-- <div class="breadcrumb-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-12 col-12"> 
+                        <h2 class="breadcrumb-title">Mon Compte</h2>
+                    </div>
+                </div>
+            </div>
+            </div>-->
+            <!--+216 othmanbaligh26182433 T.G-->
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+
+                        <div class="profile-sidebar">
+                            <div class="widget-profile pro-widget-content">
+                                    
+                                    <div class="profile-det-info">
+                                        <h3>{{user.lastName}} {{user.firstName}}</h3>
+                                        <div class="patient-details">
+                                            <h5 class="mb-0">{{user.role}}</h5>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="dashboard-widget">
+                                <nav class="dashboard-menu">
+                                    <ul>
+                                      
+                                        <li >
+                                          <a routerLink="anciendonnes/">
+                                                <i class="fas fa-columns"></i>
+                                                <span>changer mot de passe</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+                                     
+                                        <li>
+                                            <a (click)="logout()">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                                <span>Déconnecter</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7 col-lg-8 col-xl-9">            
+                        <div class="row">
+                             <router-outlet></router-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    <!--+216 othmanbaligh26182433 T.G-->

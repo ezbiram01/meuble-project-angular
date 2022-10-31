@@ -1,0 +1,64 @@
+
+<div class="col-md-12">
+    <div class="appointment-tab"> 
+        <div class="tab-content"> 
+            <div class="tab-pane show active" id="upcoming-appointments">
+                <div class="card">
+                    <div class="card-body">
+                        <form [formGroup]="addForm"  (ngSubmit)="edit()">
+                            <div class="row form-row"> 
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Titre</label>
+                                        <input type="text" [(ngModel)]="produit.title" class="form-control" formControlName="title">
+                                        <div *ngIf="addForm.get('title')!.invalid && (addForm.get('title')!.dirty || addForm.get('title')!.touched)">
+                                            <span class="error">Veuillez saisir le Titre.</span>
+                                          </div>                                      
+                                    </div>
+                                </div>
+
+                                
+
+                                
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Source</label>
+                                        <input type="text" [(ngModel)]="produit.source"class="form-control" formControlName="source">
+                                        <div *ngIf="addForm.get('source')!.invalid && (addForm.get('source')!.dirty || addForm.get('source')!.touched)">
+                                            <span class="error">Veuillez saisir la Source.</span>
+                                          </div> 
+                                    </div>
+                                </div>
+
+                                
+            <!--+216 othmanbaligh26182433 T.G-->
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Categorie</label>
+                                        <select class="form-select form-control" [(ngModel)]="produit.categ.id"  formControlName="categorie"  >
+                                            <option *ngFor="let c of categList" [value]="c.id">{{c.designation}}</option> 
+                                        </select>
+                                        <div *ngIf="addForm.get('categorie')!.invalid && (addForm.get('categorie')!.dirty || addForm.get('categorie')!.touched)">
+                                            <span class="error">Veuillez choisir le Categorie.</span>
+                                          </div> 
+                                    </div>
+                                </div>
+
+                                
+
+
+                                 
+                            </div>
+                            <div class="submit-section">
+                                <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary submit-btn">Valider</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>            <!--+216 othmanbaligh26182433 T.G-->

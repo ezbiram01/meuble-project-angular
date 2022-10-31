@@ -1,0 +1,171 @@
+            <!--+216 othmanbaligh26182433 T.G-->
+
+<div class="content" style="background-color: rgb(255, 255, 255); margin-block-start: 25px; margin-block-end: 25px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 offset-md-2">
+
+                <div class="account-content">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-9 col-lg-6 login-left" >
+                            <img style="margin-left:-170px;max-width: 500px; height:300px;" src="assets/img/member1.jpg" class="img-fluid" alt="Doccure Register">
+                        </div>
+                        <div class="col-md-12 col-lg-6 login-right">
+                            <div class="login-header">
+                                <h3>Inscription : </h3>
+                            </div>
+
+                            <form [formGroup]="registerForm" (ngSubmit)="register()">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group form-focus">
+                                            <label class="focus-label"> Vous êtes un : <span
+                                                    class="error">(*)</span></label>
+                                            <select class="form-select form-control" [(ngModel)]="userRole"
+                                                aria-label="Default select example" formControlName="role">
+                                                Vous êtes un :
+                                                <option value="MEMBER1">Membre Niveau1</option>
+                                                <option value="MEMBER2">Membre Niveau2</option>
+                                                <option value="MEMBER3">Membre Niveau3</option>
+
+                                            </select>
+                                            <div
+                                                *ngIf="registerForm.get('role')!.invalid && (registerForm.get('role')!.dirty || registerForm.get('role')!.touched)">
+                                                <span class="error">Veuillez choisir votre Role</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="text" class="form-control floating" formControlName="lastName">
+                                            <label class="focus-label">Nom <span class="error">(*)</span></label>
+                                            <div
+                                                *ngIf="registerForm.get('lastName')!.invalid && (registerForm.get('lastName')!.dirty || registerForm.get('lastName')!.touched)">
+                                                <span class="error">Veuillez saisir votre Nom</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="text" class="form-control floating"
+                                                formControlName="firstName">
+                                            <label class="focus-label">Prenom <span class="error">(*)</span></label>
+                                            <div
+                                                *ngIf="registerForm.get('firstName')!.invalid && (registerForm.get('firstName')!.dirty || registerForm.get('firstName')!.touched)">
+                                                <span class="error">Veuillez saisir votre Prénom</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <label class="focus-label"> Genre <span class="error">(*)</span> </label>
+                                            <select class="form-select form-control" aria-label="Default select example"
+                                                formControlName="gender">
+                                                <option value="Homme">Homme</option>
+                                                <option value="Femme">Femme</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="text" class="form-control floating" formControlName="country">
+                                            <label class="focus-label">Payes <span class="error">(*)</span></label>
+                                            <div
+                                                *ngIf="registerForm.get('country')!.invalid && (registerForm.get('country')!.dirty || registerForm.get('country')!.touched)">
+                                                <span class="error">Veuillez saisir votre Pays</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="text" class="form-control floating" formControlName="region">
+                                            <label class="focus-label">Région <span class="error">(*)</span></label>
+                                            <div
+                                                *ngIf="registerForm.get('region')!.invalid && (registerForm.get('region')!.dirty || registerForm.get('region')!.touched)">
+                                                <span class="error">Veuillez saisir votre Region</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="text" class="form-control floating" formControlName="tel">
+                                            <label class="focus-label">Tel <span class="error">(*)</span></label>
+                                            <div *ngIf="tel!.invalid && tel!.touched">
+                                                <p *ngIf="tel?.errors?.['required']" class="error">Veuillez saisir votre
+                                                    Téléphone</p>
+                                                <p *ngIf="tel?.errors?.['minlength']" class="error">N° Téléphone au min
+                                                    8 chiffres</p>
+                                                <p *ngIf="tel?.errors?.['maxlength']" class="error">N° Téléphone au max
+                                                    8 chiffres</p>
+                                                <p *ngIf="tel?.errors?.['pattern']" class="error">N° Téléphone Invalide
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="text" class="form-control floating" formControlName="email">
+                                            <label class="focus-label">E-mail <span class="error">(*)</span></label>
+                                            <div *ngIf="email!.invalid && email!.touched">
+                                                <p *ngIf="email?.errors?.['required']" class="error">Veuillez saisir
+                                                    votre E-mail</p>
+                                                <p *ngIf="email?.errors?.['pattern']" class="error">E-mail Invalide</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <input type="password" class="form-control floating"
+                                                formControlName="password">
+                                            <label class="focus-label">Mot de Passe <span
+                                                    class="error">(*)</span></label>
+                                            <div
+                                                *ngIf="registerForm.get('password')!.invalid && (registerForm.get('password')!.dirty || registerForm.get('password')!.touched)">
+                                                <div *ngIf="password!.invalid && tel!.touched">
+                                                    <p *ngIf="password?.errors?.['required']" class="error">Veuillez
+                                                        saisir votre Mot de passe</p>
+                                                    <p *ngIf="password?.errors?.['minlength']" class="error">Mot de
+                                                        passe Faible</p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                                <div class="text-end">
+                                    <a class="forgot-link" routerLink="/login">Vous avez un déja compte?</a>
+                                </div>
+                                <button [disabled]="registerForm.invalid" class="btn btn-primary w-100 btn-lg login-btn"
+                                    type="submit">Inscription</button>
+
+                            </form>
+                            
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <br>
+      <br>
+</div>
+<br>
+            <!--+216 othmanbaligh26182433 T.G-->
